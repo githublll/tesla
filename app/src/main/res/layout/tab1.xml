@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/energy_consumption"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <!-- car_modex and sun_moon -->
+        <TextView
+            android:id="@+id/car_modex"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
+            android:text="未登录"
+            android:textSize="20dp"/>
+
+        <ImageView
+            android:id="@+id/sun_moon"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_gravity="left"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="30dp"
+            android:src="@mipmap/white_theme"/>
+
+        <!-- tesla picture -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- only show this info when login -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/drive_state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12dp"/>
+
+                <TextView
+                    android:id="@+id/update_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12dp"/>
+
+                <TextView
+                    android:id="@+id/lock_state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12dp"/>
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/s_white"/>
+
+            <!-- only show this info when login -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/aircondition_lock_state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12dp"/>
+
+                <TextView
+                    android:id="@+id/in_car"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12dp"/>
+
+                <TextView
+                    android:id="@+id/out_car"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12dp"/>
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:id="@+id/operate_view">
+    </android.support.v7.widget.RecyclerView>
+
+    <com.example.sumsang_rookie.mytab.PowerProgress
+        android:layout_margin="20dp"
+        android:id="@+id/progressBar"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="18dp"
+        android:indeterminate="false"
+        android:progressDrawable="@drawable/customprogress"/>
+</LinearLayout>
